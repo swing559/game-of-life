@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {LIFE} from '../life-table';
+
 @Component({
   selector: 'app-show-table',
   templateUrl: './show-table.component.html',
@@ -13,5 +14,6 @@ export class ShowTableComponent implements OnInit {
 
   ngOnInit() {
   }
+
 
 }

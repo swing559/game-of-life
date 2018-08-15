@@ -4,11 +4,13 @@ import {FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ShowTableComponent } from './show-table/show-table.component';
+import { EditTableComponent } from './edit-table/edit-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ShowTableComponent
+    ShowTableComponent,
+    EditTableComponent
   ],
   imports: [
     BrowserModule,
