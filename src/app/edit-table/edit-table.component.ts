@@ -10,8 +10,6 @@ export class EditTableComponent implements OnInit {
 
   lives = LIFE;
   onClick(x:number, y: number):void {
-	  console.log(x);
-	  console.log(y);
 	  this.lives[x][y]=!this.lives[x][y];
   }
   

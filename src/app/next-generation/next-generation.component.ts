@@ -12,14 +12,12 @@ export class NextGenerationComponent implements OnInit {
   
   nextGeneration(){
 	  const alive: number[8][6] = [[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]];
-	  console.log(alive);
-	  console.log(LIFE);
 	  
 	   for (let lifeRow in LIFE){
 		   for(let life in LIFE[lifeRow]){
 			   if(LIFE[lifeRow][life]){
-				   for(var i = Math.max(0, lifeRow-1); i<=+lifeRow+1; i++){
-						for(var j = Math.max(0, life-1); j<=+life+1; j++){
+				   for(var i = Math.max(0, lifeRow-1); i<=Math.min(+lifeRow+1, LIFE.length-1); i++){
+						for(var j = Math.max(0, life-1); j<=Math.min(+life+1, LIFE[lifeRow].length-1); j++){
 							if( i != +lifeRow || j != +life){
 								alive[i][j]++;
 								
@@ -30,7 +28,17 @@ export class NextGenerationComponent implements OnInit {
 		   }
 	   }
 	   
-	   console.log(alive);
+	   for (let row in LIFE){
+		   for (let column in LIFE[row]){
+			   if((alive[row][column]== 2 || alive[row][column] ==3) && LIFE[row][column] == true)
+				   LIFE[row][column] = true;
+			   else if (alive[row][column] == 3 && LIFE[row][column] ==false)
+				   LIFE[row][column] = true;
+			   else
+				   LIFE[row][column] = false;
+		   }
+	   }
+	   
   }
   
   constructor() { }
