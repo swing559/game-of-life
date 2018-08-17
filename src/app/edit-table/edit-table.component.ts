@@ -9,6 +9,9 @@ import { LIFE } from '../life-table';
 export class EditTableComponent implements OnInit {
 
   lives = LIFE;
+  
+  /*switches a cell determined by the row and column dropdown
+    between alive and dead status*/
   onClick(x:number, y: number):void {
 	  this.lives[x][y]=!this.lives[x][y];
   }
