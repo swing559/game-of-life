@@ -16,6 +16,10 @@ export class EditTableComponent implements OnInit {
 	  this.lives[x][y]=!this.lives[x][y];
   }
   
+  onReset() {
+	  
+  }
+  
   constructor() { }
 
   ngOnInit() {
