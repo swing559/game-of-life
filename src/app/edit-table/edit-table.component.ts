@@ -17,7 +17,11 @@ export class EditTableComponent implements OnInit {
   }
   
   onReset() {
-	  
+	for(var i = 0; i<this.lives.length; i++){
+		for (var j=0; j<this.lives[i].length; j++){
+			this.lives[i][j]=false;
+		}
+	}
   }
   
   constructor() { }
