@@ -2,6 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.3.
 
+## Installation
+
+Install node and the angular cli. use the command 'npm install -g @angular/cli'
+
+Download the zip file 
+
+Extract and navigate to the extracted folder 
+
+Perform 'npm install' in the command line interface
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
